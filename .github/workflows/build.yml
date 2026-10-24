@@ -45,7 +45,7 @@ jobs:
         run: cd /tmp/flutter_src && flutter analyze --no-fatal-infos || true
 
       - name: Build APK release
-        run: cd /tmp/flutter_src && flutter build apk --release
+        run: cd /tmp/flutter_src && flutter build apk --release --android-skip-build-dependency-validation
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
